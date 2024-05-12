@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import requests
 import urllib3
 import os
+import datetime
 
 load_dotenv()
 
@@ -97,7 +98,7 @@ def home():
     athleteCity = f'{athleteSet["city"]}'
     recentMap = f'{dataset[0]["map"]["summary_polyline"]}'
     recentMiles = f'{round(dataset[0]["distance"]* 0.000621371, 2)}'
-    recentTime = f'{round(dataset[0]["moving_time"]/ 60, 2)}'
+    recentTime = f'{datetime.timedelta(seconds=dataset[0]["moving_time"])}'
     recentKudos = f'{dataset[0]["kudos_count"]}'
 
     athleteTotal_url = "https://www.strava.com/api/v3/athletes/" + f'{athleteSet["id"]}' + "/stats"
