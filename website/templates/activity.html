@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% block content %}
+<div class="card" style="width: 40rem; margin: auto; float: none;">
+    <form method="POST">
+        <h3 align="center">Add Activity</h3>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name" name="name" placeholder="Activity Name"/>
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <input type="text" class="form-control" id="type" name="type" placeholder="Activity type"/>
+        </div>
+        <div class="form-group">
+            <label for="sporttype">Sport Type</label>
+            <input type="text" class="form-control" id="sport-type" name="sporttype" placeholder="Sport type"/>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="text" class="form-control" id="date" name="date" placeholder="Activity Date"/>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <input type="text" class="form-control" id="time" name="time" placeholder="Elapsed Time"/>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="Activity Description"/>
+        </div>
+        <div class="form-group">
+            <label for="distance">Distance</label>
+            <input type="text" class="form-control" id="distance" name="distance" placeholder="Activity Distance"/>
+        </div>
+        <div class="form-group">
+            <label for="trainer">Trainer</label>
+            <input type="text" class="form-control" id="trainer" name="trainer" placeholder="Trainer"/>
+        </div>
+        <div class="form-group">
+            <label for="commute">Commute</label>
+            <input type="text" class="form-control" id="commute" name="commute" placeholder="Commute"/>
+        </div>   
+        </br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{ url_for('views.home') }}"class="btn btn-secondary">Back</a>
+    </form>
+</div>
+{% endblock %}
